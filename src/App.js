@@ -1,8 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
 import styled from 'styled-components';
-import { add } from './reducers/pedidoReducer';
-import Items from './containers/Items';
+import ItemsContainer from './containers/ItemsContainer';
 
 const Title = styled.div`
   text-align: center;
@@ -15,19 +13,9 @@ const App = (props) => {
       <Title>
         <h1>TMO</h1>
       </Title>
-      <Items />
+      <ItemsContainer />
     </div>
   )
-}
-
-const mapStateToProps = (state) => {
-  return {
-    cantidad: state.cantidad
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  add(dispatch);
 }
 
 export default App;

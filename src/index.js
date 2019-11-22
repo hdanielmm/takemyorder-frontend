@@ -5,7 +5,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { store } from './store/store';
+import { loadItems } from './actions/loadItems';
 
+store.dispatch(loadItems());
 
 ReactDOM.render(
   <Provider store={store}>
