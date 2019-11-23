@@ -1,22 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
-import ItemsContainer from './containers/ItemsContainer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import './App.css';
+import Nav from './components/nav/Nav';
 import NewProduct from './components/newProduct/NewProduct';
-
-const Title = styled.div`
-  text-align: center;
-`;
+import ItemsContainer from './containers/ItemsContainer';
+import Login from './components/login/Login';
 
 const App = (props) => {
   console.log('props', props)
   return (
-    <div className='App'>
-      <Title>
-        <h1>TMO</h1>
-      </Title>
-      <NewProduct />
-      <ItemsContainer />
-    </div>
+    <Router>
+      <div className='App'>
+        <Nav />
+        <Switch>
+          <Route path='/' exact component={Login} />
+          <Route path='/newProduct' component={NewProduct} />
+          <Route path='/items' component={ItemsContainer} />
+        </Switch>
+      </div>
+    </Router>
   )
 }
 

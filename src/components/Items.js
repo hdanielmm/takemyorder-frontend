@@ -11,28 +11,31 @@ const Container = styled.div`
 `;
 
 const Items = ({ items, itemsList, addItem }) => {
-  
+
   const handleOnClick = (item) => {
     addItem(item)
   }
 
-  console.log({items});
+  console.log({ items });
   return (
-    <Container>
-      {itemsList.map(item =>
-        <div key={item.id}>
-          <Img src={item.image_url} alt={item.name} />
-          <div>
-            <h4>{item.name}</h4>
-            <p>{item.tagline}</p>
+    <>
+      <h1>TMO</h1>
+      <Container>
+        {itemsList.map(item =>
+          <div key={item.id}>
+            <Img src={item.image_url} alt={item.name} />
+            <div>
+              <h4>{item.name}</h4>
+              <p>{item.tagline}</p>
+            </div>
+            <div>
+              <button onClick={() => handleOnClick(item)}>Agregar</button>
+              <button >Quitar</button>
+            </div>
           </div>
-          <div>
-            <button onClick={()=>handleOnClick(item)}>Agregar</button>
-            <button >Quitar</button>
-          </div>
-        </div>
-      )}
-    </Container>
+        )}
+      </Container>
+    </>
   );
 }
 
