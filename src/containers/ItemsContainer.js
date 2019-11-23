@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { addItem } from '../actions/addItem';
-import Items from '../components/Items';
+import Items from '../components/items/Items';
 
 const mapStateToProps = state => {
   return {

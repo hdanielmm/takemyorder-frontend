@@ -1,0 +1,22 @@
+.container {
+  display         : flex;
+  justify-content : space-around;
+  flex-wrap       : wrap;
+  width           : 100%;
+  background-color: #eee;
+}
+
+.card {
+  border   : 2px solid #333;
+  flex-grow: 1;
+  width    : 30%;
+  margin   : 10px;
+  min-width: 280px;
+  padding  : 20px 2px;
+}
+
+Img {
+  width : auto;
+  height: 400px;
+
+}

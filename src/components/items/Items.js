@@ -1,40 +1,32 @@
 import React from 'react';
 import Img from 'react-image';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  background-color: #eee;
-`;
+import './style.css';
 
 const Items = ({ items, itemsList, addItem }) => {
 
   const handleOnClick = (item) => {
     addItem(item)
   }
-
+  
   console.log({ items });
   return (
     <>
       <h1>TMO</h1>
-      <Container>
+      <div className='container'>
         {itemsList.map(item =>
-          <div key={item.id}>
+          <div className='card' key={item.id}>
             <Img src={item.image_url} alt={item.name} />
             <div>
               <h4>{item.name}</h4>
               <p>{item.tagline}</p>
             </div>
             <div>
-              <button onClick={() => handleOnClick(item)}>Agregar</button>
-              <button >Quitar</button>
+              <button onClick={() => handleOnClick(item)}>Add</button>
+              <button >Remove</button>
             </div>
           </div>
         )}
-      </Container>
+      </div>
     </>
   );
 }

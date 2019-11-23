@@ -16,7 +16,7 @@ export function takeMyOrderReducer(state = initialState, action) {
       const newItems = [...state.order.items, action.payload]
       return {
         ...state,
-        pedido: {
+        order: {
           items: newItems
         }
       };
