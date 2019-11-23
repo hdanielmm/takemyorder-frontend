@@ -21,9 +21,13 @@ export function takeMyOrderReducer(state = initialState, action) {
         }
       };
     case DELETE_ITEM_FROM_ORDER:
+      const oldItems = state.order.items.filter(i => i.id !== action.payload.id);
+      console.log('payload', action.payload.id)
       return {
         ...state,
-        cantidad: state.cantidad - 1
+        order: {
+          items: oldItems
+        }
       };
     case SHOW_ITEMS:
       return {

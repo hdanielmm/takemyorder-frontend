@@ -2,10 +2,14 @@ import React from 'react';
 import Img from 'react-image';
 import './style.css';
 
-const Items = ({ items, itemsList, addItem }) => {
+const Items = ({ items, itemsList, addItem, deleteItem }) => {
 
-  const handleOnClick = (item) => {
-    addItem(item)
+  const handleAddItem = (item) => {
+    addItem(item);
+  }
+
+  const handleDeleteItem = (item) => {
+    deleteItem(item);
   }
   
   console.log({ items });
@@ -21,8 +25,8 @@ const Items = ({ items, itemsList, addItem }) => {
               <p>{item.tagline}</p>
             </div>
             <div>
-              <button onClick={() => handleOnClick(item)}>Add</button>
-              <button >Remove</button>
+              <button onClick={() => handleAddItem(item)}>Add</button>
+              <button onClick={() => handleDeleteItem(item)}>Remove</button>
             </div>
           </div>
         )}
