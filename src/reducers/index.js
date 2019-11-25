@@ -24,7 +24,9 @@ export function takeMyOrderReducer(state = initialState, action) {
       };
     case DELETE_ITEM_FROM_ORDER:
       const index = state.order.items.findIndex((item) => item.id === action.payload.id );
-      newItems.splice(index, 1);
+      if(index >= 0) {
+        newItems.splice(index, 1);
+      }
       console.log({index, newItems})
       return {
         ...state,

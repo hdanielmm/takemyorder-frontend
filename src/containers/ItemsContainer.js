@@ -11,8 +11,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item)),
-  deleteItem: item => dispatch(deleteItem(item))
+  deleteItem: item => dispatch(deleteItem(item)),
+  addItem: item => dispatch(addItem(item))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Items);

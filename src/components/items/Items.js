@@ -13,13 +13,21 @@ const Items = ({ items, itemsList, addItem, deleteItem }) => {
   }
 
   const amount = (id) => {
+    console.log("entré")
     const count = items.filter(i => i.id === id);
     return count.length;
   }
 
+  console.log({ items })
+
   return (
     <>
       <h1>TMO</h1>
+      <div>
+        Order: {items.map(item =>
+          <p>{item.name} - {amount(item.id)}</p>
+        )}
+      </div>
       <div className='container'>
         {itemsList.map(item =>
           <div className='card' key={item.id}>

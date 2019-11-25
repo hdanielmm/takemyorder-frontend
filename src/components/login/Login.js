@@ -8,11 +8,11 @@ const Login = () => {
       <form>
         <ul className='flex-outer'>
           <li>
-            <label for='tableNumber'>Table number:</label>
+            <label htmlFor='tableNumber'>Table number:</label>
             <input type="text" id='tableNumber' name="tableNumber" />
           </li>
           <li>
-            <label for='code'>Code:</label>
+            <label htmlFor='code'>Code:</label>
             <input type="text" id='code' name="code" />
           </li>
           <li>
