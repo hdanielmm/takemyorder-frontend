@@ -11,8 +11,12 @@ const Items = ({ items, itemsList, addItem, deleteItem }) => {
   const handleDeleteItem = (item) => {
     deleteItem(item);
   }
-  
-  console.log({ items });
+
+  const amount = (id) => {
+    const count = items.filter(i => i.id === id);
+    return count.length;
+  }
+
   return (
     <>
       <h1>TMO</h1>
@@ -28,6 +32,7 @@ const Items = ({ items, itemsList, addItem, deleteItem }) => {
               <button onClick={() => handleAddItem(item)}>Add</button>
               <button onClick={() => handleDeleteItem(item)}>Remove</button>
             </div>
+            <div>{amount(item.id)}</div>
           </div>
         )}
       </div>

@@ -11,9 +11,11 @@ const initialState = {
 
 // Function reductora
 export function takeMyOrderReducer(state = initialState, action) {
+  let newItems = state.order.items;
   switch (action.type) {
     case ADD_ITEM_TO_ORDER:
-      const newItems = [...state.order.items, action.payload]
+      newItems = [...state.order.items, action.payload]
+      console.log({newItems})
       return {
         ...state,
         order: {
@@ -21,12 +23,13 @@ export function takeMyOrderReducer(state = initialState, action) {
         }
       };
     case DELETE_ITEM_FROM_ORDER:
-      const oldItems = state.order.items.filter(i => i.id !== action.payload.id);
-      console.log('payload', action.payload.id)
+      const index = state.order.items.findIndex((item) => item.id === action.payload.id );
+      newItems.splice(index, 1);
+      console.log({index, newItems})
       return {
         ...state,
         order: {
-          items: oldItems
+          items: newItems
         }
       };
     case SHOW_ITEMS:
