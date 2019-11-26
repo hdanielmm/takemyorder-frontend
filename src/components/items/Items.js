@@ -27,6 +27,7 @@ const Items = ({ items, itemsList, addItem, deleteItem, confirmOrder }) => {
     return count.length;
   }
 
+  let orderId = 0;
   const listSelectedItems = () => {
 
     function compare(a, b) {
@@ -49,8 +50,10 @@ const Items = ({ items, itemsList, addItem, deleteItem, confirmOrder }) => {
       if (first != last) { unrepitedItems.splice(first, last - first) }
     });
     const names = unrepitedItems.map(i => {
+      
       return (
         {
+          orderId: orderId++,
           id: i.id,
           name: i.name,
           quantity: countItemsSelected(i.id)

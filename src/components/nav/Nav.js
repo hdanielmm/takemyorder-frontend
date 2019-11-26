@@ -14,6 +14,9 @@ export default function Nav() {
         <Link style={navStyle} to='/items'>
           <li>Menu</li>
         </Link>
+        <Link style={navStyle} to='/myTable'>
+          <li>My Table</li>
+        </Link>
         <Link style={navStyle} to='/newProduct'>
           <li>New Product</li>
         </Link>

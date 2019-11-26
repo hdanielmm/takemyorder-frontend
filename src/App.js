@@ -5,6 +5,7 @@ import Nav from './components/nav/Nav';
 import NewProductContainer from './containers/createProductContainer';
 import ItemsContainer from './containers/ItemsContainer';
 import Login from './components/login/Login';
+import tablesContainer from './containers/tablesContainer';
 
 const App = (props) => {
   console.log('props', props)
@@ -16,6 +17,7 @@ const App = (props) => {
           <Route path='/' exact component={Login} />
           <Route path='/newProduct' component={NewProductContainer} />
           <Route path='/items' component={ItemsContainer} />
+          <Route path='/myTable' component={tablesContainer} />
         </Switch>
       </div>
     </Router>
