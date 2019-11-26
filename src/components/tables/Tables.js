@@ -9,7 +9,7 @@ const Tables = ({ order }) => {
 
   return (
     <>
-      <h2>My table</h2>
+      <h2>My Order</h2>
       <table>
         <thead>
           <tr>

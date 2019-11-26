@@ -69,6 +69,7 @@ const Items = ({ items, itemsList, addItem, deleteItem, confirmOrder }) => {
   return (
     <>
       <h1>TMO</h1>
+
       <div>
         <h3>My order:</h3>
         {listSelectedItems().map(item =>
@@ -76,6 +77,7 @@ const Items = ({ items, itemsList, addItem, deleteItem, confirmOrder }) => {
         )}
         <button className='confirm-button' onClick={handleConfirmOrder}>Confirm order</button>
       </div>
+      
       <div className='container'>
         {itemsList.map(item =>
           <div className='card' key={item.id}>

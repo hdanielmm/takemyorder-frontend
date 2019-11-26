@@ -9,7 +9,7 @@ export default function Nav() {
   }
   return (
     <nav className='nav'>
-      <h3>Logo</h3>
+      <h3>Amsterdam-Bar</h3>
       <ul className='nav-links'>
         <Link style={navStyle} to='/items'>
           <li>Menu</li>
@@ -17,14 +17,8 @@ export default function Nav() {
         <Link style={navStyle} to='/myTable'>
           <li>My Order</li>
         </Link>
-        {/* <Link style={navStyle} to='/newProduct'>
-          <li>New Product</li>
-        </Link> */}
         <Link style={navStyle} to='/cart'>
           <li><i className = "material-icons">shopping_cart</i></li>
-        </Link>
-        <Link style={navStyle} to='/'>
-          <li>Exit</li>
         </Link>
       </ul>
     </nav>
