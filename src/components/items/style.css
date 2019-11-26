@@ -19,3 +19,7 @@ Img {
   width : auto;
   height: 200px;
 }
+
+.confirm-button {
+  margin-bottom: 10px;
+}
