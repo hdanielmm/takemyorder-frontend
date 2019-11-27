@@ -68,10 +68,10 @@ const Tables = ({ items, itemsList, confirmOrder }) => {
 
       {listSelectedItems().length > 0
         ? <button
-            className='btn confirm-button'
-            onClick={handleConfirmOrder}
-          >
-            Confirm
+          className='btn confirm-button'
+          onClick={handleConfirmOrder}
+        >
+          Confirm
           </button>
         : "You have not selected any items yet."
       }

@@ -1,21 +1,25 @@
-
+h1 {
+  margin-top: 120px;
+}
 
 .container {
   display         : flex;
   justify-content : space-around;
   flex-wrap       : wrap;
-  width           : 100%;
+  width           : 80%;
+  margin         : 0 auto;
   /* background-color: #eee; */
 }
 
 .card {
-  border   : 2px solid #333;
+  /* border   : 2px solid #333; */
   flex-grow: 1;
   width    : 20%;
   margin   : 10px;
   min-width: 280px;
   padding  : 20px 2px;
   justify-content: stretch;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 Img {
