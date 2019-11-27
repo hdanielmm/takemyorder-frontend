@@ -4,7 +4,7 @@ import './App.css';
 import Nav from './components/nav/Nav';
 import NewProductContainer from './containers/createProductContainer';
 import ItemsContainer from './containers/ItemsContainer';
-import Login from './components/login/Login';
+// import Login from './components/login/Login';
 import ordersContainer from './containers/ordersContainer';
 
 const App = (props) => {
