@@ -1,3 +1,5 @@
+
+
 .container {
   display         : flex;
   justify-content : space-around;
@@ -13,6 +15,7 @@
   margin   : 10px;
   min-width: 280px;
   padding  : 20px 2px;
+  justify-content: stretch;
 }
 
 Img {

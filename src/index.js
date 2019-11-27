@@ -6,6 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { store } from './store/store';
 import { loadItems } from './actions/loadItems';
+// import 'materialize-css/dist/css/materialize.min.css';
 
 store.dispatch(loadItems());
 

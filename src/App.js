@@ -5,7 +5,7 @@ import Nav from './components/nav/Nav';
 import NewProductContainer from './containers/createProductContainer';
 import ItemsContainer from './containers/ItemsContainer';
 import Login from './components/login/Login';
-import tablesContainer from './containers/tablesContainer';
+import ordersContainer from './containers/ordersContainer';
 
 const App = (props) => {
   console.log('props', props)
@@ -14,10 +14,10 @@ const App = (props) => {
       <div className='App'>
         <Nav />
         <Switch>
-          <Route path='/' exact component={Login} />
+          <Route path='/' exact component={ItemsContainer} />
           <Route path='/newProduct' component={NewProductContainer} />
           <Route path='/items' component={ItemsContainer} />
-          <Route path='/myTable' component={tablesContainer} />
+          <Route path='/my-order' component={ordersContainer} />
         </Switch>
       </div>
     </Router>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { confirmOrder } from '../actions/confirmOrder';
-import Tables from '../components/tables/Tables';
+import Tables from '../components/orders/Orders';
 
 const mapStateToProps = state => {
   return {

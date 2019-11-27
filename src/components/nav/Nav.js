@@ -14,10 +14,10 @@ export default function Nav() {
         <Link style={navStyle} to='/items'>
           <li>Menu</li>
         </Link>
-        <Link style={navStyle} to='/myTable'>
+        <Link style={navStyle} to='/my-order'>
           <li>My Order</li>
         </Link>
-        <Link style={navStyle} to='/cart'>
+        <Link style={navStyle} to='/my-order'>
           <li><i className = "material-icons">shopping_cart</i></li>
         </Link>
       </ul>

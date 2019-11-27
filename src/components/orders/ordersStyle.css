@@ -1,0 +1,29 @@
+/* body {
+  margin: 0;
+}
+
+.container {
+  display        : flex;
+  justify-content: space-around;
+  flex-wrap      : wrap;
+  width          : 80%;
+  margin         : 0 auto;
+}
+
+.card {
+  border   : 2px solid #333;
+  flex-grow: 1;
+  width    : 20%;
+  margin   : 10px;
+  min-width: 280px;
+  padding  : 20px 2px;
+}
+
+Img {
+  width : auto;
+  height: 200px;
+}
+
+.confirm-button {
+  margin-bottom: 10px;
+} */

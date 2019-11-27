@@ -1,5 +1,6 @@
 import React from 'react'
-import './style.css';
+import Img from 'react-image';
+// import './ordersStyle.css';
 
 
 const Tables = ({ items, itemsList, confirmOrder }) => {
@@ -42,7 +43,7 @@ const Tables = ({ items, itemsList, confirmOrder }) => {
     unrepitedItems.filter(item => {
       const first = unrepitedItems.indexOf(item);
       const last = unrepitedItems.lastIndexOf(item);
-      if (first != last) { unrepitedItems.splice(first, last - first) }
+      if (first !== last) { return unrepitedItems.splice(first, last - first) }
     });
     const names = unrepitedItems.map(i => {
       return (
@@ -51,7 +52,7 @@ const Tables = ({ items, itemsList, confirmOrder }) => {
           id: i.id,
           image: i.image_url,
           name: i.name,
-          quantity: countItemsSelected(i.id)
+          quantity: countItemsSelected(i.id),
         }
       );
     });
@@ -61,13 +62,32 @@ const Tables = ({ items, itemsList, confirmOrder }) => {
   // End listSelectedItems
 
   return (
-    <div>
-      <h3>My order:</h3>
-      {listSelectedItems().map(item =>
-        <p key={item.id}>{item.name} - {countItemsSelected(item.id)}</p>
-      )}
-      <button className='confirm-button' onClick={handleConfirmOrder}>Confirm order</button>
-    </div>
+
+    <>
+      <h1>My order</h1>
+
+      {listSelectedItems().length > 0
+        ? <button
+            className='btn confirm-button'
+            onClick={handleConfirmOrder}
+          >
+            Confirm
+          </button>
+        : "You have not selected any items yet."
+      }
+
+      <div className='container'>
+        {listSelectedItems().map(item =>
+          <div className='card hoverable' key={item.id}>
+            <Img src={item.image} alt={item.name} />
+            <div>
+              <h4>{item.name}</h4>
+            </div>
+            <p>{countItemsSelected(item.id)}</p>
+          </div>
+        )}
+      </div>
+    </>
   )
 }
 
