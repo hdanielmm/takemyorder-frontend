@@ -4,7 +4,8 @@ import Tables from '../components/tables/Tables';
 
 const mapStateToProps = state => {
   return {
-    order: state.order.confirmedOrder
+    items: state.order.items,
+    itemsList: state.itemsList
   };
 };
 
